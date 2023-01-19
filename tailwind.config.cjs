@@ -26,9 +26,9 @@ module.exports = {
           },
         },
         secondary: {
-          200: 'hsl(217, 16%, 45%)',
-          300: 'hsl(229, 25%, 31%)',
-          400: 'hsl(229, 64%, 46%)',
+          200: 'hsl(217, 16%, 45%)', // header outline
+          300: 'hsl(229, 25%, 31%)', // dark text
+          400: 'hsl(229, 64%, 46%)', // score text
         },
         background: {
           400: 'hsl(214, 47%, 23%)',

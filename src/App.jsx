@@ -12,11 +12,11 @@ const App = () => {
   }, [type]);
 
   return (
-    <>
+    <div className=' bg-gradient-to-b from-background-400 to-background-700 w-full h-[100vh] p-6 md:p-8 text-white'>
       <Header type={type} score={score} />
       <Body type={type} setScore={setScore} />
       <Footer type={type} setType={setType} />
-    </>
+    </div>
   )
 }
 
