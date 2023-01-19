@@ -37,6 +37,7 @@ const Body = ({ mode, setScore }) => {
       }
       if (PAIRINGS[type].includes(played)) {
         setWinner('user');
+        setScore((prev) => prev + 1);
         return;
       }
       setWinner('bot');
