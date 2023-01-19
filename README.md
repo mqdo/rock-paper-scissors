@@ -59,7 +59,7 @@ Even though I completed the challenge, I still want to improve it more, such as 
 
 - Website - [mqdo](https://github.com/mqdo/)
 - Frontend Mentor - [@mqdo](https://www.frontendmentor.io/profile/mqdo)
-- Twitter - [@mqdo-dev](https://www.twitter.com/mqdo-dev)
+- Twitter - [@mqdo_dev](https://www.twitter.com/mqdo_dev)
 
 ## Acknowledgments
 
