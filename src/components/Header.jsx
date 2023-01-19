@@ -9,7 +9,7 @@ const Title = ({ mode }) => {
     </div>
   )
   return (
-    <div className='flex flex-col uppercase font-bold text-sm md:text-2xl leading-[0.65rem] md:leading-[1.15rem]'>
+    <div className='flex flex-col uppercase font-bold text-xs md:text-2xl leading-[0.65rem] md:leading-[1.15rem]'>
       <span>Rock</span>
       <span>Paper</span>
       <span>Scissors</span>
