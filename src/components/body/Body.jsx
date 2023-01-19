@@ -19,8 +19,7 @@ const RESULTS = {
   'bot': 'You lose',
 }
 
-const Body = ({ mode, setScore }) => {
-  const [playing, setPlaying] = useState(false);
+const Body = ({ mode, setScore, playing, setPlaying }) => {
   const [userPlayed, setUserPlayed] = useState('');
   const [botPlayed, setBotPlayed] = useState('');
   const [winner, setWinner] = useState('');
@@ -54,7 +53,7 @@ const Body = ({ mode, setScore }) => {
 
   if (playing) {
     return (
-      <div className='w-full md:max-w-[720px] mx-auto py-8 md:py-10 flex flex-col flex-auto items-center justify-around uppercase relative'>
+      <div className={`w-full ${winner !== '' ? 'md:max-w-[860px]' : 'md:max-w-[720px]'} mx-auto py-8 md:py-10 flex flex-col flex-auto items-center justify-around uppercase relative`}>
         <div className='w-full flex items-center justify-center md:justify-between gap-6 md:gap-8'>
           <div className='flex flex-col md:flex-col-reverse items-center gap-4 relative'>
             {winner === 'user'
@@ -64,23 +63,23 @@ const Body = ({ mode, setScore }) => {
             <Button mode='playing' type={userPlayed} />
             <span className=' text-sm md:text-xl md:tracking-widest font-semibold md:pb-4 z-50'>You picked</span>
           </div>
-          <div className='flex flex-col md:flex-col-reverse items-center gap-4'>
+          <div className='flex flex-col md:flex-col-reverse items-center gap-4 relative'>
             {botPlayed
-              ? <div className='relative'>
+              ? <>
                 {winner === 'bot'
                   ? <Waving />
                   : null
                 }
                 <Button mode='playing' type={botPlayed} />
-              </div>
-              : <div className='w-28 h-28 md:w-40 md:h-40 grid place-items-center mx-3 md:mx-4'>
-                <div className='w-[85px] h-[85px] md:w-[120px] md:h-[120px] bg-background-700 rounded-full'></div>
+              </>
+              : <div className='w-32 h-32 md:w-52 md:h-52 mx-3 md:mx-4 rounded-full grid place-items-center'>
+                <div className='w-24 h-24 md:w-40 md:h-40 rounded-full bg-background-700'></div>
               </div>
             }
             <span className=' text-sm md:text-xl md:tracking-widest font-semibold md:pb-4 z-50'>The House picked</span>
           </div>
         </div>
-        <div className='h-[200px] flex flex-col items-center gap-4 md:absolute top-[50%] -translate-y-[10%] z-50'>
+        <div className='h-[200px] flex flex-col items-center justify-center gap-4 md:absolute md:top-[50%] md:-translate-y-[40%] z-50'>
           <h1 className=' text-5xl font-bold'>{RESULTS[winner]}</h1>
           {winner
             ? <button onClick={handlePlayAgain} className='w-[200px] h-10 rounded-md bg-white text-secondary-300 uppercase font-semibold text-base tracking-wider hover:opacity-80 hover:text-primary-rock-400'>Play again</button>
